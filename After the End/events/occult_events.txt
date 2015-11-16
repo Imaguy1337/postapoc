@@ -53,3 +53,38 @@ character_event = {
 		}
 	}
 }
+character_event = {
+	id = occult.2
+	desc = EVTDESC_occult_zealous
+	picture = GFX_evt_bishop
+
+	religion = occultist
+	
+	trigger = {
+	NOT = { has_character_flag = occult_zealous_fired }
+	NOT = { trait = zealous }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = { set_character_flag = occult_zealous_fired }
+	
+	option = {
+		name = EVTOPT_occult_zealous
+		add_trait = zealous
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVTOPT_occult_diplomacy
+		piety = -20
+		change_diplomacy = 2
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+}
