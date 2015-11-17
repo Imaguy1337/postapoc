@@ -192,3 +192,35 @@ character_event = {
 	}
 
 }
+character_event = {
+	id = occult.6
+	desc = EVTDESC_occult_stressed
+	picture = GFX_evt_bishop
+
+	religion = occultist
+	
+	trigger = {
+	NOT = { has_character_flag = occult_stressed_fired }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = { set_character_flag = occult_stressed_fired }
+	
+	option = {
+		name = EVTOPT_occult_stressed
+		add_trait = stressed
+		ai_chance = {
+			factor = 10
+			modifier = { factor = -10 trait = zealous }
+		}
+	}
+	option = {
+		name = EVTOPT_occult_unstressedzealous
+		trigger = {
+		trait = zealous
+		}
+	}
+
+}
