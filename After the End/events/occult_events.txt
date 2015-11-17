@@ -53,6 +53,10 @@ character_event = {
 		}
 	}
 }
+#2 and 3 are the same event with different wordings.
+#2, 3 and 5 add zealous, so they don't fire for zealous.
+#4 has a pro-science stance, so it doesn't fire for zealous.
+#The decision on 5 can prevent 4 from firing.
 character_event = {
 	id = occult.2
 	desc = EVTDESC_occult_zealous
@@ -82,6 +86,106 @@ character_event = {
 		name = EVTOPT_occult_diplomacy
 		piety = -20
 		change_diplomacy = 2
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+}
+character_event = {
+	id = occult.3
+	desc = EVTDESC_occult_zealous_2
+	picture = GFX_evt_bishop
+
+	religion = occultist
+	
+	trigger = {
+	NOT = { has_character_flag = occult_zealous_fired }
+	NOT = { trait = zealous }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = { set_character_flag = occult_zealous_fired }
+	
+	option = {
+		name = EVTOPT_occult_zealous_2
+		add_trait = zealous
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVTOPT_occult_diplomacy_2
+		piety = -20
+		change_diplomacy = 2
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+}
+character_event = {
+	id = occult.4
+	desc = EVTDESC_occult_science
+	picture = GFX_evt_bishop
+
+	religion = occultist
+	
+	trigger = {
+	NOT = { has_character_flag = occult_science_fired }
+	NOT = { trait = zealous }
+	NOT = { has_character_flag = occult_sciencephobe}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = { set_character_flag = occult_science_fired }
+	
+	option = {
+		name = EVTOPT_occult_science
+		change_learning = 1
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+}
+character_event = {
+	id = occult.5
+	desc = EVTDESC_occult_sciencephobe
+	picture = GFX_evt_bishop
+
+	religion = occultist
+	
+	trigger = {
+	NOT = { has_character_flag = occult_science_fired}
+	NOT = { has_character_flag = occult_sciencephobe_fired }
+	NOT = { trait = zealous }
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = { set_character_flag = occult_sciencephobe_fired }
+	
+	option = {
+		name = EVTOPT_occult_sciencephobe
+		add_trait = zealous
+		change_learning = -2
+		add_character_flag = occult_sciencephobic
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVTOPT_occult_sciencephile
+		piety = -100
+		change_learning = 1
 		ai_chance = {
 			factor = 10
 		}
