@@ -69,7 +69,7 @@ character_event = {
 	NOT = { trait = zealous }
 	}
 	mean_time_to_happen = {
-		months = 1
+		years = 250
 	}
 	
 	immediate = { set_character_flag = occult_zealous_fired }
@@ -92,7 +92,7 @@ character_event = {
 	}
 
 }
-character_event = {
+""character_event = {
 	id = occult.3
 	desc = EVTDESC_occult_zealous_2
 	picture = GFX_evt_bishop
@@ -104,7 +104,7 @@ character_event = {
 	NOT = { trait = zealous }
 	}
 	mean_time_to_happen = {
-		months = 1
+		years = 250
 	}
 	
 	immediate = { set_character_flag = occult_zealous_fired }
@@ -126,7 +126,7 @@ character_event = {
 		}
 	}
 
-}
+}""
 character_event = {
 	id = occult.4
 	desc = EVTDESC_occult_science
@@ -140,7 +140,7 @@ character_event = {
 	NOT = { has_character_flag = occult_sciencephobe}
 	}
 	mean_time_to_happen = {
-		months = 1
+		years = 250
 	}
 	
 	immediate = { set_character_flag = occult_science_fired }
@@ -167,7 +167,7 @@ character_event = {
 	NOT = { trait = zealous }
 	}
 	mean_time_to_happen = {
-		months = 1
+		years = 250
 	}
 	
 	immediate = { set_character_flag = occult_sciencephobe_fired }
@@ -203,7 +203,7 @@ character_event = {
 	NOT = { has_character_flag = occult_stressed_fired }
 	}
 	mean_time_to_happen = {
-		months = 1
+		years = 250
 	}
 	
 	immediate = { set_character_flag = occult_stressed_fired }
