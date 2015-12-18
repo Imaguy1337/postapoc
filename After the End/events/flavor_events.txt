@@ -1,14 +1,14 @@
-# 1		southern knight
-# 2		old world conveniences
-# 3		american dream
-# 4 	interact with scholars in center of learning province
-# 10	baseball game
-# 11	baseball team wins
-# 12	baseball team loses
-# 13	baseball for the whole realm
-# 20	[hidden] select courtiers for fate of the old world
-# 21	[hidden] courtier chooses opinion about the fate of the old world
-# 22	fate of the old world
+# 1		Southern knight
+# 2		Old world conveniences
+# 3		American dream
+# 4 	Interact with scholars in center of learning province
+# 10	Baseball game
+# 11	Baseball team wins
+# 12	Baseball team loses
+# 13	Baseball for the whole realm
+# 20	[Hidden] Select courtiers for fate of the old world
+# 21	[Hidden] Courtier chooses opinion about the fate of the old world
+# 22	Fate of the old world
 
 namespace = flavor
 
