@@ -90,7 +90,7 @@ character_event = {
 	NOT = { trait = zealous }
 	}
 	mean_time_to_happen = {
-		years = 250
+		years = 1
 	}
 	
 	option = {
@@ -192,7 +192,7 @@ character_event = {
 	NOT = { has_character_flag = occult_stressed_fired }
 	}
 	mean_time_to_happen = {
-		years = 250
+		years = 1
 	}
 	
 	immediate = { set_character_flag = occult_stressed_fired }
@@ -203,6 +203,7 @@ character_event = {
 		ai_chance = {
 			factor = 10
 			modifier = { factor = -10 trait = zealous }
+			modifier = { factor = -10 religion = occultist_reformed }
 		}
 	}
 	option = {
@@ -214,10 +215,16 @@ character_event = {
 		trigger = {
 		religion = occultist_reformed
 		}
+		ai_chance = {
+		factor = 100
+		}
 	option = {
 		name = EVTOPT_occult_unstressedzealous
 		trigger = {
 		trait = zealous
+		}
+		ai_chance = {
+		factor = 100
 		}
 	}
 }
