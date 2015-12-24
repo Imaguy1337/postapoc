@@ -1,6 +1,11 @@
 namespace = occult
 
-# Choose lore school when reformed
+# 1 - Character chooses lore school when reformed
+# 2 - Character becomes zealous or gains diplmoacy
+# 3 - Character gains learning
+# 4 - Character losses piety and gains learning or becomes zealous and looses learning
+# 5 - Character becomes stressed or converts to another religion
+
 character_event = {
 	id = occult.1
 	desc = EVTDESC_occult_choose_sect_ref
@@ -53,10 +58,6 @@ character_event = {
 		}
 	}
 }
-#2 and 3 are the same event with different wordings.
-#2, 3 and 5 add zealous, so they don't fire for zealous.
-#4 has a pro-science stance, so it doesn't fire for zealous.
-#The decision on 5 can prevent 4 from firing.
 character_event = {
 	id = occult.2
 	immediate = {
@@ -78,17 +79,18 @@ character_event = {
 		}
 		text = EVTDESC_occult_zealous
 	}
-	triiger = 
 	picture = GFX_evt_bishop
 
-	religion = occultist
-	
 	trigger = {
+	OR = { 
+	religion = occultist
+	religion = occultist_reformed
+	}
 	NOT = { has_character_flag = occult_zealous_fired }
 	NOT = { trait = zealous }
 	}
 	mean_time_to_happen = {
-		years = 1
+		years = 250
 	}
 	
 	option = {
@@ -110,16 +112,17 @@ character_event = {
 
 }
 character_event = {
-	id = occult.4
+	id = occult.3
 	desc = EVTDESC_occult_science
 	picture = GFX_evt_bishop
 
-	religion = occultist
-	
 	trigger = {
 	NOT = { has_character_flag = occult_science_fired }
 	NOT = { trait = zealous }
 	NOT = { has_character_flag = occult_sciencephobe }
+	OR = { 
+	religion = occultist
+	religion = occultist_reformed
 	}
 	mean_time_to_happen = {
 		years = 250
@@ -137,16 +140,18 @@ character_event = {
 
 }
 character_event = {
-	id = occult.5
+	id = occult.4
 	desc = EVTDESC_occult_sciencephobe
 	picture = GFX_evt_bishop
 
-	religion = occultist
-	
 	trigger = {
 	NOT = { has_character_flag = occult_science_fired}
 	NOT = { has_character_flag = occult_sciencephobe_fired }
 	NOT = { trait = zealous }
+	OR = { 
+	religion = occultist
+	religion = occultist_reformed
+	}
 	}
 	mean_time_to_happen = {
 		years = 250
@@ -175,17 +180,19 @@ character_event = {
 
 }
 character_event = {
-	id = occult.6
+	id = occult.5
 	desc = EVTDESC_occult_stressed
 	picture = GFX_evt_bishop
 
-	religion = occultist
-	
 	trigger = {
+	OR = { 
+	religion = occultist
+	religion = occultist_reformed
+	}
 	NOT = { has_character_flag = occult_stressed_fired }
 	}
 	mean_time_to_happen = {
-		years = 1
+		years = 250
 	}
 	
 	immediate = { set_character_flag = occult_stressed_fired }
@@ -199,10 +206,18 @@ character_event = {
 		}
 	}
 	option = {
+		name = EVTOPT_occult_convincedconversion
+		set_character_flag = occultconversion
+	}
+	option = {
+		name = EVTOPT_occult_reformedways
+		trigger = {
+		religion = occultist_reformed
+		}
+	option = {
 		name = EVTOPT_occult_unstressedzealous
 		trigger = {
 		trait = zealous
 		}
 	}
-
 }
