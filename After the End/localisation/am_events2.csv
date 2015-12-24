@@ -1404,9 +1404,7 @@ EVTOPT_oregon_success;I have not died of dysentery!;;;;;;;;;;;;;x
 EVTDESC_occult_zealous;Others think of the Occult as an evil practice used by witches. But occultism has endured for hundreds of years longer than their pitiful religions! I'll show them!;;;;;;;;;;;;;x
 EVTDESC_occult_zealous_2;Many accuse Occultists of being evil witches. However, their religions have survived far shorter than our own. This clearly shows that they are inferior.;;;;;;;;;;;;;x
 EVTOPT_occult_zealous;It is time the world know the truth!;;;;;;;;;;;;;x
-EVTOPT_occult_zealous_2;The world shall know the truth!;;;;;;;;;;;;;x
 EVTOPT_occult_diplomacy;I should keep these thoughts to myself.;;;;;;;;;;;;;x
-EVTOPT_occult_diplomacy_2;I should keep this to myself.;;;;;;;;;;;;;x
 EVTDESC_occult_science;When the ancient known as Newton discovered gravity, he was occused of practicing the occult. Stories like this are throughout history, people making great discoveries and being accused of being occult by the ignorant masess.;;;;;;;;;;;;;x
 EVTOPT_occult_science;We must remember this.;;;;;;;;;x
 EVTDESC_occult_sciencephobe;People in our realm are saying that the purpose of science is to replace our beliefs.;;;;;;;;;x
@@ -1415,6 +1413,8 @@ EVTOPT_occult_sciencephile;No, our faith and science can co-exist.;;;;;;;;;x
 EVTDESC_occult_stressed;Everyone outside of the occult thinks that we are evil. Though I know this is wrong, I cannot stop the constant barrage...;;;;;;;;;x
 EVTOPT_occult_stressed;This is really taking it's toll.;;;;;;;;;x
 EVTOPT_occult_unstressedzealous;My faith will keep me strong.;;;;;;;;;x
+EVTOPT_occult_convincedconversion;Perhaps they are right...;;;;;;;;;x
+EVTOPT_occult_reformedways;They may say that about the old occult, but with the reformation of the occult our ways have changed!;;;;;;;;;x
 obj_buddhist_stop_drinking_title;Stop Drinking;Fini la boisson;Entsagt dem Alkohl;; Deja de beber;;;;;;;;;x
 obj_buddhist_stop_drinking_desc;[This.GetTitledFirstName], as a devoted [This.Religion.GetName], is trying to learn to abandon [This.GetHerHis] harmful drinking habits.;[This.GetTitledFirstName], bouddhiste zélé, tente d'apprendre à abandonner son penchant pour la boisson qui lui cause tant de souffrances.;[This.GetTitledFirstName] ist überzeugter [This.Religion.GetName] und versucht, [This.GetHerHis]e schädlichen Trinkgewohnheiten abzulegen.;;[This.GetTitledFirstName], como budista devoto/a, trata de aprender a abandonar [This.GetHerHis] dañinos hábitos de consumir bebidas alcohólicas.;;;;;;;;;x
 obj_buddhist_reject_empty_pleasures_title;Learn to Reject Empty Pleasures;Apprendre à rejeter les plaisirs inutiles;Lernt, leere Vergnügungen abzulehnen;;Aprender a Rechazar Placeres Vacíos;;;;;;;;;x
