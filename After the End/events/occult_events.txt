@@ -90,7 +90,7 @@ character_event = {
 	NOT = { trait = zealous }
 	}
 	mean_time_to_happen = {
-		years = 1
+		years = 250
 	}
 	
 	option = {
@@ -119,7 +119,7 @@ character_event = {
 	trigger = {
 	NOT = { has_character_flag = occult_science_fired }
 	NOT = { trait = zealous }
-	NOT = { has_character_flag = occult_sciencephobe }
+	NOT = { has_character_flag = occult_sciencephobe } }
 	OR = { 
 	religion = occultist
 	religion = occultist_reformed
@@ -137,8 +137,8 @@ character_event = {
 			factor = 10
 		}
 	}
-
 }
+
 character_event = {
 	id = occult.4
 	desc = EVTDESC_occult_sciencephobe
@@ -175,6 +175,8 @@ character_event = {
 		change_learning = 1
 		ai_chance = {
 			factor = 10
+			modifier = { factor = 10 learning = 10 }
+			modifier = { factor = 20 learning = 15 }
 		}
 	}
 
@@ -192,7 +194,7 @@ character_event = {
 	NOT = { has_character_flag = occult_stressed_fired }
 	}
 	mean_time_to_happen = {
-		years = 1
+		years = 250
 	}
 	
 	immediate = { set_character_flag = occult_stressed_fired }
@@ -200,6 +202,21 @@ character_event = {
 	option = {
 		name = EVTOPT_occult_stressed
 		add_trait = stressed
+		trigger = {
+		NOT = { trait = stressed }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = -10 trait = zealous }
+			modifier = { factor = -10 religion = occultist_reformed }
+		}
+	}
+	option = {
+		name = EVTOPT_occult_stressed
+		add_trait = depressed
+		trigger = {
+		trait = stressed
+		}
 		ai_chance = {
 			factor = 10
 			modifier = { factor = -10 trait = zealous }
@@ -209,6 +226,11 @@ character_event = {
 	option = {
 		name = EVTOPT_occult_convincedconversion
 		set_character_flag = occultconversion
+		ai_chance = {
+			factor = 10
+			modifier = { factor = -10 trait = zealous }
+			modifier = { factor = -10 religion = occultist_reformed }
+		}
 	}
 	option = {
 		name = EVTOPT_occult_reformedways
