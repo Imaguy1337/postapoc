@@ -1,6 +1,6 @@
 AFTER THE END
 A post-apocalyptic North America mod for Crusader Kings II
-Version 0.6.1
+Version 0.6.2
 
 
 	INSTALLATION
@@ -34,6 +34,7 @@ Casus bellis from Project Balance
 Titular Empires from CK2+ (old version) by Wiz
 Portraits from Lux Invicta by DarkReborn and others
 Clothing and headgear from AGOT Congenital Overhaul by LancelotLoire
+Occultist flavor events by Imaguy1337
 
 Music:
 "Sardana", "Lord of the Land", "Teller of the Tales", "Drums of the Deep", "DD Groove", "Porch Blues", "Virtutes Instrumenti", "Night of the Owl", "Achaidh Cheide", "Black Bird", "Dhaka", "Moorland", "Thunderhead"
