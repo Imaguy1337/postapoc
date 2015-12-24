@@ -59,7 +59,26 @@ character_event = {
 #The decision on 5 can prevent 4 from firing.
 character_event = {
 	id = occult.2
-	desc = EVTDESC_occult_zealous
+	immediate = {
+	set_character_flag = occult_zealous_fired
+	random = {
+	chance = 50
+	set_character_flag = occult_zealous_desc2
+	}
+	}
+	desc = {
+		trigger = {
+		NOT = { has_character_flag = occult_zealous_desc2 }
+		}
+		text = EVTDESC_occult_zealous_2
+	}
+	desc = {
+		trigger = {
+		has_character_flag = occult_zealous_desc2
+		}
+		text = EVTDESC_occult_zealous
+	}
+	triiger = 
 	picture = GFX_evt_bishop
 
 	religion = occultist
@@ -69,10 +88,8 @@ character_event = {
 	NOT = { trait = zealous }
 	}
 	mean_time_to_happen = {
-		years = 250
+		years = 1
 	}
-	
-	immediate = { set_character_flag = occult_zealous_fired }
 	
 	option = {
 		name = EVTOPT_occult_zealous
@@ -92,41 +109,6 @@ character_event = {
 	}
 
 }
-""character_event = {
-	id = occult.3
-	desc = EVTDESC_occult_zealous_2
-	picture = GFX_evt_bishop
-
-	religion = occultist
-	
-	trigger = {
-	NOT = { has_character_flag = occult_zealous_fired }
-	NOT = { trait = zealous }
-	}
-	mean_time_to_happen = {
-		years = 250
-	}
-	
-	immediate = { set_character_flag = occult_zealous_fired }
-	
-	option = {
-		name = EVTOPT_occult_zealous_2
-		add_trait = zealous
-		ai_chance = {
-			factor = 10
-		}
-	}
-	
-	option = {
-		name = EVTOPT_occult_diplomacy_2
-		piety = -20
-		change_diplomacy = 2
-		ai_chance = {
-			factor = 10
-		}
-	}
-
-}""
 character_event = {
 	id = occult.4
 	desc = EVTDESC_occult_science
@@ -137,7 +119,7 @@ character_event = {
 	trigger = {
 	NOT = { has_character_flag = occult_science_fired }
 	NOT = { trait = zealous }
-	NOT = { has_character_flag = occult_sciencephobe}
+	NOT = { has_character_flag = occult_sciencephobe }
 	}
 	mean_time_to_happen = {
 		years = 250
@@ -203,7 +185,7 @@ character_event = {
 	NOT = { has_character_flag = occult_stressed_fired }
 	}
 	mean_time_to_happen = {
-		years = 250
+		years = 1
 	}
 	
 	immediate = { set_character_flag = occult_stressed_fired }
