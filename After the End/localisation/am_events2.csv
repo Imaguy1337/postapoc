@@ -1415,6 +1415,11 @@ EVTOPT_occult_stressed;This is really taking it's toll.;;;;;;;;;x
 EVTOPT_occult_unstressedzealous;My faith will keep me strong.;;;;;;;;;x
 EVTOPT_occult_convincedconversion;Perhaps they are right...;;;;;;;;;x
 EVTOPT_occult_reformedways;They may say that about the old occult, but with the reformation of the occult our ways have changed!;;;;;;;;;x
+EVTDESC_conversion;You have decided to abandon your old religion. But what will replace it?;;;;;;;;;x
+EVTOPT_conversion_abandonheresy;I shall renounce my heretical ways.;;;;;;;;;x
+EVTOPT_conversion_adoptheresy;Perhaps the heretics are right...;;;;;;;;;x
+EVTOPT_conversion_reversereligion;I was right before I converted...;;;;;;;;;x
+EVTOPT_conversion_prestige;I should trust the prestigious to choose the correct religion.;;;;;;;;;x
 obj_buddhist_stop_drinking_title;Stop Drinking;Fini la boisson;Entsagt dem Alkohl;; Deja de beber;;;;;;;;;x
 obj_buddhist_stop_drinking_desc;[This.GetTitledFirstName], as a devoted [This.Religion.GetName], is trying to learn to abandon [This.GetHerHis] harmful drinking habits.;[This.GetTitledFirstName], bouddhiste zélé, tente d'apprendre à abandonner son penchant pour la boisson qui lui cause tant de souffrances.;[This.GetTitledFirstName] ist überzeugter [This.Religion.GetName] und versucht, [This.GetHerHis]e schädlichen Trinkgewohnheiten abzulegen.;;[This.GetTitledFirstName], como budista devoto/a, trata de aprender a abandonar [This.GetHerHis] dañinos hábitos de consumir bebidas alcohólicas.;;;;;;;;;x
 obj_buddhist_reject_empty_pleasures_title;Learn to Reject Empty Pleasures;Apprendre à rejeter les plaisirs inutiles;Lernt, leere Vergnügungen abzulehnen;;Aprender a Rechazar Placeres Vacíos;;;;;;;;;x
