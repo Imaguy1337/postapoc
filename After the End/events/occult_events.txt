@@ -225,7 +225,7 @@ character_event = {
 	}
 	option = {
 		name = EVTOPT_occult_convincedconversion
-		set_character_flag = occultconversion
+		character_event = conversion.1
 		ai_chance = {
 			factor = 10
 			modifier = { factor = -10 trait = zealous }
@@ -240,6 +240,7 @@ character_event = {
 		ai_chance = {
 		factor = 100
 		}
+	}
 	option = {
 		name = EVTOPT_occult_unstressedzealous
 		trigger = {
