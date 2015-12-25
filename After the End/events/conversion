@@ -1,0 +1,37 @@
+namespace = conversion
+# Convert to/from heresy, or trigger another event
+character_event = {
+	id = conversion.1
+	desc = EVTDESC_conversion
+	picture = GFX_event_bishop
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_conversion_abandonheresy
+	abandon_heresy = yes
+	trigger = {
+	is_heretic = yes
+	}
+	}
+	option = {
+	name = EVTOPT_conversion_adoptheresy
+	become_heretic = yes
+	trigger = {
+	is_heretic = no
+	}
+	}
+	option = {
+	name = EVTOPT_conversion_reversereligion
+	reverse_religion = PREV
+	}
+	option = {
+	name = EVTOPT_conversion_prestige
+	random_independent_ruler = {
+	limit = {
+	prestige = 1000
+	}
+	FROM = {
+	set_character_religion = PREV
+	}
+	}
+}
